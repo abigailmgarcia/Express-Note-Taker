@@ -1,7 +1,5 @@
-// const express = require('express');
 
-let noteTitle;
-let noteText;
+let noteTitle;let noteText;
 let saveNoteBtn;
 let newNoteBtn;
 let noteList;

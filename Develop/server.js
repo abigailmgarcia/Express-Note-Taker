@@ -5,20 +5,14 @@ const path = require('path');
 const api = require('./routes/notes')
 // const apiRoutes = require ('./apiRoutes');
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3001;
 const app = express();
 
 //middleware
+app.use(express.static('public'));
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
-// app.use('/api', api);
-app.use(express.static('public'));
-
-
-// app.get('/', (req, res) =>
-//   res.sendFile(path.join(__dirname, '/public/index.html'))
-// );
-app.use('/api', notes);
+app.use('/api/notes', api);
 
 //GET route for to notes page from main page
 app.get('/notes', (req, res) => {

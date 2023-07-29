@@ -2,8 +2,9 @@ const notes = require('express').Router();
 const {
     readFromFile,
     readAndAppend,
-} = require('../utils/helpers');
-const { v4: uuidv4 } =require('uuid');
+    writeToFile
+} = require('../utils/fsutils');
+const { v4: uuidv4 } = require('uuid');
 
 //retrieves JSON
 notes.get('/', (req,res) => {
@@ -19,18 +20,36 @@ notes.post('/', (req, res) => {
         id: uuidv4()
     };
 
-    readAndAppend(newNote, '../db/db.json');
+    readAndAppend(newNote, './db/db.json');
     res.json('success: new note added');
 });
 
-notes.get('/:note_id', (req, res) =>{
-    const noteId = req.params.note_id;
+notes.get('/:id', (req, res) =>{
+    const noteId = req.params.id;
     readFromFile('./db/db.json')
         .then((data) => JSON.parse(data))
         .then((json) => {
             const response = json.find((note) => note.id === noteId);
-            res.json(response);
+            res.send(response);
             console.log('successfully retrieved note', response)
+        })
+        .catch((err) => {
+            console.log(err);
+            res.status(500).send('error retrieving note');
+        });
+})
+
+// delete route
+notes.delete('/:id', (req,res) => {
+    const noteId = req.params.id;
+
+    readFromFile('./db/db.json')
+        .then((data) => JSON.parse(data))
+        .then((json) => {
+            const response = json.filter((note) => note.id !== noteId);
+            writeToFile('./db/db.json', response);
+            res.send()
+            console.log('succesfully removed note', response)
         })
         .catch((err) => {
             console.log(err);
