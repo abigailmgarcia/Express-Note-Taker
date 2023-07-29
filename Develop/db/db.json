@@ -1,22 +1,5 @@
 [
     {
-        "title": "Test Title",
-        "text": "Test text"
-    },
-    {
-        "title": "New Note",
-        "text": "This was not added through local host."
-    },
-    {
-        "title": "New Note",
-        "text": "added through local host."
-    },
-    {
-        "title": "New Note with ID",
-        "text": "checking if Id is generated",
-        "note_id": ""
-    },
-    {
         "title": "OMG IT WORKS",
         "text": "yay it works!!",
         "id": "c4564a77-f22c-40c3-9b17-8d5ff1722323"
