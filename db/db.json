@@ -1,0 +1,12 @@
+[
+    {
+        "title": "changed public to docs",
+        "text": "hopefully this allows it to publish\n",
+        "id": "409e1a2f-3871-44ff-98cc-df823db03e44"
+    },
+    {
+        "title": "deployment",
+        "text": "my project won't deploy bc it can find my index.html, figure out how to deploy without moving it .",
+        "id": "44e69f36-10fd-4cd4-98ac-45d38d6e96de"
+    }
+]
