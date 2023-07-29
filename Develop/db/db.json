@@ -1,7 +1,12 @@
 [
     {
-        "title": "OMG IT WORKS",
-        "text": "yay it works!!",
-        "id": "c4564a77-f22c-40c3-9b17-8d5ff1722323"
+        "title": "hello world",
+        "text": "this application works! test it out!",
+        "id": "72a619ca-22cb-412c-a337-c189fafd639f"
+    },
+    {
+        "title": "hi world",
+        "text": "good morning",
+        "id": "482cf12b-7562-4dd5-b7e1-51a6759f93cf"
     }
 ]
