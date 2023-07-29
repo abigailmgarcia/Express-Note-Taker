@@ -24,12 +24,12 @@ notes.post('/', (req, res) => {
 });
 
 notes.get('/:note_id', (req, res) =>{
-    const noteId = req.params.id;
+    const noteId = req.params.note_id;
     readFromFile('./db/db.json')
         .then((data) => JSON.parse(data))
         .then((json) => {
             const response = json.find((note) => note.id === noteId);
-            res.send(response);
+            res.json(response);
             console.log('successfully retrieved note', response)
         })
         .catch((err) => {
