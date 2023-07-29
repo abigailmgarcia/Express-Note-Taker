@@ -9,19 +9,19 @@ const PORT = process.env.PORT || 3001;
 const app = express();
 
 //middleware
-app.use(express.static('public'));
+app.use(express.static('docs'));
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 app.use('/api/notes', api);
 
 //GET route for to notes page from main page
 app.get('/notes', (req, res) => {
-    res.sendFile(path.join(__dirname, './public/notes.html'))
+    res.sendFile(path.join(__dirname, './docs/notes.html'))
 });
 
 // Wildcard route to direct users back to the landing page
 app.get('*', (req, res) =>
-  res.sendFile(path.join(__dirname, 'public/index.html'))
+  res.sendFile(path.join(__dirname, 'docs/index.html'))
 );
 
 
