@@ -11,6 +11,8 @@ notes.get('/', (req,res) => {
     readFromFile('./db/db.json').then((data) => res.json(JSON.parse(data)));
 });
 
+//saves note
+
 notes.post('/', (req, res) => {
     console.log(req.body);
     const { title, text } = req.body;
@@ -24,6 +26,7 @@ notes.post('/', (req, res) => {
     res.json('success: new note added');
 });
 
+//single note
 notes.get('/:id', (req, res) =>{
     const noteId = req.params.id;
     readFromFile('./db/db.json')
