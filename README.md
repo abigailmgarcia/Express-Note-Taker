@@ -21,9 +21,10 @@ To run this application there are no installations for the user. However, on the
 
 To use this application you will first be taken to the homepage where you will click on the blue "get started" button. Then the user will be prompted to the "notes" page where you will type in the "note title" section, the title of your notes amd in the section below, your actual notes. After, as save button will appear on the screen that you can click and the note will be stored on the left hand side of the screen. If you no longer want to see the note you wrote, you can press the delete button and the note will do so. When you are all done you can click the "note taker" at the left top corn of the page to take you back to the home page.
 
+Deployed Application: https://expressnotes-abigailmg-428e4a932b10.herokuapp.com/
 
-![alt text](./Develop/images/Screenshot%202023-07-29%20at%205.33.29%20AM.png)
-![alt text](./Develop/images/notespage.png)
+![alt text](./images/Screenshot%202023-07-29%20at%205.33.29%20AM.png)
+![alt text](./images/notespage.png)
 
 ## Credits
 

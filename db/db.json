@@ -8,5 +8,10 @@
         "title": "deployment",
         "text": "my project won't deploy bc it can find my index.html, figure out how to deploy without moving it .",
         "id": "44e69f36-10fd-4cd4-98ac-45d38d6e96de"
+    },
+    {
+        "title": "deploy to heroku",
+        "text": "pls help someone\n",
+        "id": "481f952e-0823-42e7-974f-b4291292c1a6"
     }
 ]
